@@ -16,15 +16,14 @@ def create_entry():
     _filetype = request.form['filetype']
     _body = request.form['bodytext']
 
-    entry = return_entry(_title)
-    print entry
+    entry_hash = return_entry(_title)
 
     ''' homepage = open("templates/index.html", "r")                                                           
     contents = homepage.readlines()                                                                            
     homepage.close() '''
 
     homepage = open("test_file", 'a')
-    homepage.write("<!--" + entry + "-->")
+    homepage.write("<!--" + entry_hash["entry"] + "-->")
     homepage.close
 
     return json.dumps({'html':'<span>All fields good!</span>'})
@@ -37,10 +36,10 @@ def return_entry(title):
     for line in fileinput.FileInput("templates/index.html",inplace = 1):
         if '<table border="1">' in line:
             line = line.replace(line, line + '<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\
+\                                                                                                               
 ><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title">\
+\                                                                                                               
 <a href="sample.txt">' + title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
             return {'line': i, 'entry': line}
         i+=1
     return None
-
-
