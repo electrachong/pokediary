@@ -35,11 +35,7 @@ def return_entry(title):
     i = 1
     for line in fileinput.FileInput("templates/index.html",inplace = 1):
         if '<table border="1">' in line:
-            line = line.replace(line, line + '<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\
-\                                                                                                               
-><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title">\
-\                                                                                                               
-<a href="sample.txt">' + title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
+            line = line.replace(line, line + '<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title"><a href="sample.txt">' + title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
             return {'line': i, 'entry': line}
         i+=1
     return None
