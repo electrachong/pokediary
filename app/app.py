@@ -5,11 +5,11 @@ app = Flask(__name__)
 def hello():
     return render_template('index.html')
 
-@app.route("/create_entry_form")
+@app.route("/create_entry_form",methods=['POST'])
 def create_entry_form():
     return render_template('create_entry_form.html')
 
-@app.route('/create_entry',methods=['POST'])
+@app.route('/create_entry',methods=['POST, GET'])
 def create_entry():
     _title = request.form['title']
     _filetype = request.form['filetype']
