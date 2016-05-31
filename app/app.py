@@ -15,7 +15,7 @@ def create_entry():
     _filetype = request.form['filetype']
     _body = request.form['bodytext']
 
-    return "ttest2"
+    return json.dumps({'html':'<span>All fields good!</span>'})
 
 if __name__ == "__main__":
     app.run()
