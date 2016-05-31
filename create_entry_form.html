@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>create an entry</title>
+        <meta name="description" content=""> 
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link href='styles.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+        <!-- play the pokemon health center theme song -->
+        <audio autoplay="autoplay">
+            <source src="healing_pokemon_sound.mp3"  type="audio/mpeg" />
+        </audio>
+        
+        <center>
+            <h1>create a new file entry</h1>
+            <h2>File created.</h2>
+        </center>
+            <!-- still must iron out how the backend connects
+                to the frontend -->
+        <div id="entry_form">
+            <form action="" method="post" name="create_an_entry">
+                <label for="title">title:</label> <input type="text" name="title"><br>
+                <label for="filetype">file format:</label> <select name="filetype">
+                    <option value="plain text">plain text</option>
+                    <option value="html">html</option>
+                </select><br>
+                    
+                <textarea name="bodytext" rows="30" cols="80">Fill in your text here.</textarea>
+                <br><input type="submit">    
+            </form>
+        </div>
+    </body>
+</html>

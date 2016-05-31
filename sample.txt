@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>pokediary</title>
+        <meta name="description" content="">
+        <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+        <link href='styles.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <center>
+            <h1>pokediary</h1>
+            <h2>a web diary run from a docker container</h2>
+            <img id='centerimg' src='http://vignette3.wikia.nocookie.net/pokemonessentials/images/f/f5/PokeCenter.png/revision/latest?cb=20101030170243' \>
+            
+        </center>
+        
+        <div id="filedex"><h1>filedex</h1>
+        <body>
+            <table border="1">
+                <tr>
+                    <td class="img_cells"><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></td>
+                    <td>title of entry</td>
+                    <td>[timestamp]</td>
+                </tr>
+                <tr>
+                    <td class="img_cells"><img src="http://img.pokemondb.net/sprites/black-white/normal/rapidash.png" alt="Rapidash"></td>
+                    <td>title of entry</td>
+                    <td>[timestamp]</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
