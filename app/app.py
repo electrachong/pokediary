@@ -19,15 +19,19 @@ def create_entry():
     _filetype = request.form['filetype']
     _body = request.form['bodytext']
 
-    homepage = open("templates/index.html", "r")                                                           
-    contents = homepage.readlines()                                                                            
+    full_title = _title + '.' + _filetype
+    newfile = open(full_title, 'w')
+    newfile.write(_body)
+    newfile.close()
+    
+    homepage = open("templates/index.html", "r")         contents = homepage.readlines()                   
     homepage.close() 
         
     homepage = open("templates/index.html", 'w')
     for line in contents:
         homepage.write(line)
         if '<table border="1">' in line:
-            homepage.write('<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title"><a href="sample.txt">' + _title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
+            homepage.write('<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title"><a href="' + full_title + ''">' + _title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
     homepage.close
 
     return json.dumps({'html':'<span>All fields good!</span>'})
