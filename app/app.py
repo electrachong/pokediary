@@ -23,7 +23,7 @@ def create_entry():
     contents = homepage.readlines()                                                                            
     homepage.close() 
         
-    homepage = open("test_file", 'w')
+    homepage = open("templates/index.html", 'w')
     for line in contents:
         homepage.write(line)
         if '<table border="1">' in line:
