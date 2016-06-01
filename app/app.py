@@ -24,7 +24,8 @@ def create_entry():
     newfile.write(_body)
     newfile.close()
     
-    homepage = open("templates/index.html", "r")         contents = homepage.readlines()                   
+    homepage = open("templates/index.html", "r")
+    contents = homepage.readlines()                   
     homepage.close() 
         
     homepage = open("templates/index.html", 'w')
