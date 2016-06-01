@@ -32,7 +32,7 @@ def create_entry():
     for line in contents:
         homepage.write(line)
         if '<table border="1">' in line:
-            homepage.write('<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title"><a href="' '~/pokediary/app/'+ full_title + '">' + _title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
+            homepage.write('<tr class="entry_cell"><td class="img_cells"><a href="sample.txt"\><img src="http://img.pokemondb.net/sprites/black-white/normal/abra.png" alt="Abra"></a></td><td class="title"><a href="' '/root/pokediary/app/'+ full_title + '">' + _title + '</a></td><td class="timestamp">[timestamp]</td></tr>')
     homepage.close
 
     return json.dumps({'html':'<span>All fields good!</span>'})
