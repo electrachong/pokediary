@@ -24,7 +24,7 @@
         </center>
             <!-- still must iron out how the backend connects
                 to the frontend -->
-        <div id="entry_form">
+        <div id="entry_form" action="index.html">
             <form action="" method="post" name="create_an_entry">
                 <label for="title">title:</label> <input type="text" name="title"><br>
                 <label for="filetype">file format:</label> <select name="filetype">
@@ -33,7 +33,7 @@
                 </select><br>
                     
                 <textarea name="bodytext" rows="30" cols="80">Fill in your text here.</textarea>
-                <br><a href="index.html"><button id="submit_button">Submit</button>    </a>  
+                <br><input type="submit" value="Go to homepage" id="submit_button">
             </form>
         </div>
     </body>

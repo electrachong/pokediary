@@ -19,7 +19,7 @@ def create_entry():
     _filetype = request.form['filetype']
     _body = request.form['bodytext']
 
-    full_title = _title + '.' + _filetype
+    full_title = _title + _filetype
     newfile = open(full_title, 'w')
     newfile.write(_body)
     newfile.close()
