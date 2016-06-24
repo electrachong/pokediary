@@ -1,6 +1,6 @@
 # encoding: utf-8                                                                 
 
-from flask import Flask, render_template, json, request
+from flask import Flask, render_template, json, request, redirect
 import fileinput
 from string import Template
 
@@ -43,6 +43,10 @@ def create_entry():
     homepage.close()
 
     return json.dumps({'html':'<span>All fields good!</span>'})
+
+@app.route('/redirect',methods=['POST', 'GET'])
+def redirect_to_home():
+    return redirect("http://0.0.0.0:5000", code=302)
 
 @app.route('/entries/<filename>')
 def find_page(filename):
