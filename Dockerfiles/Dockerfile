@@ -9,9 +9,7 @@ RUN git clone https://github.com/electrachong/pokediary.git
 RUN apt-get install -y python python-dev python-distribute python-pip
 RUN pip install flask
 RUN apt-get install -y emacs
-# COPY . /app
-# WORKDIR /app
-# RUN pip install -r requirements.txt
-# ENTRYPOINT ["python"]
-# CMD ["app.py"]
+WORKDIR /root/pokediary/app
+ENTRYPOINT ["python"]
+CMD ["app.py"]
 # RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
