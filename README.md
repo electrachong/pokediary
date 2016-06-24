@@ -12,4 +12,4 @@ docker build -t electrachong/pokediary:dev .
 
 Run with `docker run -i -t -p 5000:5000 electrachong/pokediary:dev`.
 
-Open `0.0.0.0:5000` in browser to see code in instance.
+Run `python app.py` and open `0.0.0.0:5000` in browser to see code in instance.
