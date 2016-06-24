@@ -38,4 +38,4 @@ def create_entry():
     return json.dumps({'html':'<span>All fields good!</span>'})
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True,host='0.0.0.0')
